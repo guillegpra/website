@@ -5,7 +5,14 @@ $(document).ready(() => {
         } else {
             $('.navbar').removeClass('sticky');
         }
-    })
+    });
+
+    // toggle menu/navbar script
+    $('.menu-btn').click(() => {
+        $('.navbar .menu').toggleClass('active');
+        $('.menu-btn').toggleClass('active');
+        $('.menu-btn i').toggleClass('active');
+    });
 });
 
-// min 18:32 https://www.youtube.com/watch?v=tcskp-ncN0I
+// min 26:10 https://www.youtube.com/watch?v=tcskp-ncN0I
