@@ -5,6 +5,17 @@ $(document).ready(() => {
         } else {
             $('.navbar').removeClass('sticky');
         }
+
+        if (this.scroll > 500) {
+            $('.scroll-up-btn').addClass('show');
+        } else {
+            $('.scroll-up-btn').removeClass('show');
+        }
+    });
+
+    // scroll up script
+    $('.scroll-up-btn').click(() => {
+        $('html').animate({ scrollTop: 0 });
     });
 
     // toggle menu/navbar script
@@ -37,4 +48,4 @@ $(document).ready(() => {
     });
 });
 
-// min 1:45:34 https://www.youtube.com/watch?v=tcskp-ncN0I
+// min 1:55:20 https://www.youtube.com/watch?v=tcskp-ncN0I
