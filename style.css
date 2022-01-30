@@ -121,7 +121,7 @@ html {
 /* home section styling */
 .home {
     display: flex;
-    background: url("images/banner.jpeg") no-repeat center;
+    /* background: url("images/banner.jpeg") no-repeat center; */
     height: 100vh;
     color: gray;
     min-height: 500px;
@@ -150,6 +150,7 @@ html {
 .home .home-content .text-3 span {
     color: lightblue;
     font-weight: 500;
+    font-weight: bold;
 }
 
 .home .home-content a {
@@ -174,7 +175,7 @@ section {
     padding: 100px 0;
 }
 
-.about, .projects, .skills, .teams, .contact, footer {
+.about, .projects, .skills, .education, .contact, footer {
     font-family: 'OpenSans', sans-serif;
 }
 
@@ -272,18 +273,18 @@ section .title::after {
 }
 
 /* projects section styling */
-.projects, .teams {
+.projects, .education {
     color: gray;
     background: lightblue;
 }
 
 .projects .title::before,
-.teams .title::before {
+.education .title::before {
     background: #fff;
 }
 
 .projects .title::after,
-.teams .title::after {
+.education .title::after {
     color: #fff;
     background: lightblue;
     content: "what i've worked on";
@@ -340,6 +341,7 @@ section .title::after {
 .skills .skills-content .left .text {
     font-size: 20px;
     font-style: 600;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -421,12 +423,12 @@ section .title::after {
     width: 50%;
 }
 
-/* teams section styling */
-.teams .title::after {
-    content: "who's with me";
+/* education section styling */
+.education .title::after {
+    content: "what i've done";
 }
 
-.teams .carousel .card {
+.education .carousel .card {
     background: lightcyan;
     border-radius: 6px;
     padding: 25px 35px;
@@ -434,11 +436,11 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.teams .carousel .card:hover {
+.education .carousel .card:hover {
     background: #fff;
 }
 
-.teams .carousel .card .box {
+.education .carousel .card .box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -446,27 +448,44 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.teams .carousel .card:hover .box {
+.education .carousel .card:hover .box {
     transform: scale(105%);
 }
 
-.teams .carousel .card .text {
+.education .carousel .card .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
 
-.teams .carousel .card img {
+.education .carousel .card .logo {
     height: 150px;
     width: 150px;
-    object-fit: cover;
     border-radius: 50%;
     border: 5px solid lightskyblue;
     transition: all 0.3s ease;
 }
 
-.teams .carousel .card:hover img {
+.education .carousel .card:hover .logo {
     border-color: lightblue;
+}
+
+.education .carousel .card .logo .upm {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 7px;
+}
+
+.education .carousel .card .logo .madrid {
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 28px;
+}
+
+.education .carousel .card .logo .imdea {
+    width: 80%;
+    margin-top: 45px;
+    margin-left: 15px;
 }
 
 .owl-dots {
@@ -611,6 +630,7 @@ footer {
     padding: 20px 23px;
     color: gray;
     font-size: 15px;
+    text-align: center;
 }
 
 footer span a {
@@ -620,6 +640,23 @@ footer span a {
 
 footer span a:hover {
     text-decoration: underline;
+}
+
+footer .socials li {
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 7px;
+}
+
+footer .socials li a {
+    color: grey;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+footer .socials li a:hover {
+    color: black;
 }
 
 /* responsive media query start */
